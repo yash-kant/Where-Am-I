@@ -1,6 +1,7 @@
 package com.example.yash.whereami;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -16,11 +17,434 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
     }
 
     public boolean onTouch(final View view, final MotionEvent motionEvent) {
-        float x = motionEvent.getX();
-        float y = motionEvent.getY();
-        Toast.makeText(MainActivity.getContext(), "x=" + x + " y="+ y, Toast.LENGTH_SHORT).show();
+        Log.i("TAG", "onTouch: " + StaticData.screenHeight + "   " + StaticData.screenWidth);
+        detectTouches(motionEvent);
         return gestureDetector.onTouchEvent(motionEvent);
     }
+
+    private void detectTouches(final MotionEvent motionEvent) {
+
+        //Get the static data and the touch coordinates and implement the required listener
+
+        double sw = StaticData.screenWidth;
+        double sh = StaticData.screenHeight;
+        double x = motionEvent.getX();
+        double y = motionEvent.getY();
+
+        Log.i("Touch", x + "   " + y);
+
+        questionOneListener(sw,sh,x,y);
+        questionTwoListener(sw,sh,x,y);
+        questionThreeListener(sw,sh,x,y);
+        questionFourListener(sw,sh,x,y);
+        questionFiveListener(sw,sh,x,y);
+        questionSixListener(sw,sh,x,y);
+        questionSevenListener(sw,sh,x,y);
+        questionEightListener(sw,sh,x,y);
+        questionNineListener(sw,sh,x,y);
+        questionTenListener(sw,sh,x,y);
+        questionElevenListener(sw,sh,x,y);
+        questionTwelveListener(sw,sh,x,y);
+    }
+
+    private void questionTwelveListener(double sw, double sh, double x, double y) {
+
+        double cx = 1227.0/1776;
+        double cy = 49.0/1080;
+        double rw = 0.03028258602711158;
+
+        double ax = cx*sw;
+        double ay = cy*sh;
+        double ar = rw*sw;
+
+        if(isInTheSquare(x,y,ax,ay,ar))
+            Toast.makeText(MainActivity.getContext(), "That's the kite.", Toast.LENGTH_SHORT).show();
+
+
+    }
+
+    private void questionElevenListener(double sw, double sh, double x, double y) {
+
+        //clockwise
+
+        double cx = 244.0/1776;
+        double cy = 352.0/1080;
+        double rw = 0.01928258602711158;
+
+        double ax = cx*sw;//1260
+        double ay = cy*sh;// 592
+        double ar = rw*sw;
+
+        if(isInTheSquare(x,y,ax,ay,ar))
+            Toast.makeText(MainActivity.getContext(), "That's flower 1.", Toast.LENGTH_SHORT).show();
+
+        cx = 447.0/1776;
+        cy = 656.0/1080;
+        rw = 0.01928258602711158;
+
+        ax = cx*sw;
+        ay = cy*sh;
+        ar = rw*sw;
+
+        if(isInTheSquare(x,y,ax,ay,ar))
+            Toast.makeText(MainActivity.getContext(), "That's flower 2.", Toast.LENGTH_SHORT).show();
+
+        cx = 50.0/1776;
+        cy = 371.0/1080;
+        rw = 0.03028258602711158;
+
+        ax = cx*sw;
+        ay = cy*sh;
+        ar = rw*sw;
+
+        if(isInTheSquare(x,y,ax,ay,ar))
+            Toast.makeText(MainActivity.getContext(), "That's flower 3 & 4.", Toast.LENGTH_SHORT).show();
+
+
+    }
+
+    private void questionTenListener(double sw, double sh, double x, double y) {
+
+        double cx1 = 128.0/1776;
+        double cy1 = 369.0/1080;
+
+        double cx2 = 49.0/1776;
+        double cy2 = 167.0/1080;
+
+        double cx3 = 296.0/1776;
+        double cy3 = 193.0/1080;
+
+        double ax1 = cx1*sw;
+        double ay1 = cy1*sh;
+
+        double ax2 = cx2*sw;
+        double ay2 = cy2*sh;
+
+        double ax3 = cx3*sw;
+        double ay3 = cy3*sh;
+
+        if(isInTheTraingle(x,y,ax1,ax2,ax3,ay1,ay2,ay3))
+            Toast.makeText(MainActivity.getContext(),"There's caterpillar. ", Toast.LENGTH_SHORT).show();
+
+    }
+
+    private void questionNineListener(double sw, double sh, double x, double y) {
+        //going clockwise
+
+        double cx = 1585.0/1776;
+        double cy = 82.0/1080;
+        double rw = 0.02128258602711158;
+
+        double ax = cx*sw;//1260
+        double ay = cy*sh;// 592
+        double ar = rw*sw;
+
+        if(isInTheSquare(x,y,ax,ay,ar))
+            Toast.makeText(MainActivity.getContext(), "That's ant 1.", Toast.LENGTH_SHORT).show();
+
+        cx = 1832.0/1776;
+        cy = 198.0/1080;
+        rw = 0.02428258602711158;
+
+        ax = cx*sw;
+        ay = cy*sh;
+        ar = rw*sw;
+
+        if(isInTheSquare(x,y,ax,ay,ar))
+            Toast.makeText(MainActivity.getContext(), "That's ant 2.", Toast.LENGTH_SHORT).show();
+
+        cx = 1851.0/1776;
+        cy = 989.0/1080;
+        rw = 0.03828258602711158;
+
+        ax = cx*sw;
+        ay = cy*sh;
+        ar = rw*sw;
+
+        if(isInTheSquare(x,y,ax,ay,ar))
+            Toast.makeText(MainActivity.getContext(), "That's ant 3.", Toast.LENGTH_SHORT).show();
+
+        cx = 397.0/1776;
+        cy = 727.0/1080;
+        rw = 0.02328258602711158;
+
+        ax = cx*sw;
+        ay = cy*sh;
+        ar = rw*sw;
+
+        if(isInTheSquare(x,y,ax,ay,ar))
+            Toast.makeText(MainActivity.getContext(), "That's ant 4.", Toast.LENGTH_SHORT).show();
+
+        cx = 84.0/1776;
+        cy = 958.0/1080;
+        rw = 0.03728258602711158;
+
+        ax = cx*sw;
+        ay = cy*sh;
+        ar = rw*sw;
+
+        if(isInTheSquare(x,y,ax,ay,ar))
+            Toast.makeText(MainActivity.getContext(), "That's ant  5.", Toast.LENGTH_SHORT).show();
+    }
+
+    private void questionEightListener(double sw, double sh, double x, double y) {
+        double cx = 1364.0/1776;
+        double cy = 780.0/1080;
+        double rw = 0.03828258602711158;
+
+        double ax = cx*sw;//1260
+        double ay = cy*sh;// 592
+        double ar = rw*sw;
+
+        if(isInTheSquare(x,y,ax,ay,ar))
+            Toast.makeText(MainActivity.getContext(), "That's the book.", Toast.LENGTH_SHORT).show();
+    }
+
+    private void questionSevenListener(double sw, double sh, double x, double y) {
+
+        double cx1 = 1060.0/1776;
+        double cy1 = 159.0/1080;
+
+        double cx2 = 1036.0/1776;
+        double cy2 = 41.0/1080;
+
+        double cx3 = 1160.0/1776;
+        double cy3 = 30.0/1080;
+
+        double ax1 = cx1*sw;
+        double ay1 = cy1*sh;
+
+        double ax2 = cx2*sw;
+        double ay2 = cy2*sh;
+
+        double ax3 = cx3*sw;
+        double ay3 = cy3*sh;
+
+        if(isInTheTraingle(x,y,ax1,ax2,ax3,ay1,ay2,ay3))
+            Toast.makeText(MainActivity.getContext(),"There's the monkey hiding. ", Toast.LENGTH_SHORT).show();
+
+
+    }
+
+    private void questionSixListener(double sw, double sh, double x, double y) {
+
+        double cx = 1163.0/1776;
+        double cy = 768.0/1080;
+        double rw = 0.02128258602711158;
+
+        double ax = cx*sw;
+        double ay = cy*sh;
+        double ar = rw*sw;
+
+        if(isInTheSquare(x,y,ax,ay,ar))
+            Toast.makeText(MainActivity.getContext(), "That's slipper 1.", Toast.LENGTH_SHORT).show();
+
+        cx = 1631.0/1776;
+        cy = 723.0/1080;
+        rw = 0.02128258602711158;
+
+        ax = cx*sw;
+        ay = cy*sh;
+        ar = rw*sw;
+
+        if(isInTheSquare(x,y,ax,ay,ar))
+            Toast.makeText(MainActivity.getContext(), "That's slipper 2.", Toast.LENGTH_SHORT).show();
+
+
+
+
+    }
+
+    private void questionFiveListener(double sw, double sh, double x, double y) {
+
+        //bottom owl
+        double cx1 = 531.0/1776;
+        double cy1 = 261.0/1080;
+
+        double cx2 = 424.0/1776;
+        double cy2 = 378.0/1080;
+
+        double cx3 = 727.0/1776;
+        double cy3 = 281.0/1080;
+
+        double ax1 = cx1*sw;
+        double ay1 = cy1*sh;
+
+        double ax2 = cx2*sw;
+        double ay2 = cy2*sh;
+
+        double ax3 = cx3*sw;
+        double ay3 = cy3*sh;
+
+
+
+        if(isInTheTraingle(x,y,ax1,ax2,ax3,ay1,ay2,ay3))
+            Toast.makeText(MainActivity.getContext(),"That's owl 1.", Toast.LENGTH_SHORT).show();
+
+        //top owl
+
+         cx1 = 393.0/1776;
+         cy1 = 223.0/1080;
+
+         cx2 = 565.0/1776;
+         cy2 = 113.0/1080;
+
+         cx3 = 417.0/1776;
+         cy3 = 80.0/1080;
+
+         ax1 = cx1*sw;
+         ay1 = cy1*sh;
+
+         ax2 = cx2*sw;
+         ay2 = cy2*sh;
+
+         ax3 = cx3*sw;
+         ay3 = cy3*sh;
+
+
+
+        if(isInTheTraingle(x,y,ax1,ax2,ax3,ay1,ay2,ay3))
+            Toast.makeText(MainActivity.getContext(),"That's owl 2.", Toast.LENGTH_SHORT).show();
+
+
+    }
+
+    private void questionFourListener(double sw, double sh, double x, double y) {
+
+        //cat near the girl
+        double cx = 1260.0/1776;
+        double cy = 592.0/1080;
+        double rw = 0.02728258602711158;
+
+        double ax = cx*sw;//1260
+        double ay = cy*sh;// 592
+        double ar = rw*sw;
+
+        if(isInTheSquare(x,y,ax,ay,ar))
+            Toast.makeText(MainActivity.getContext(), "That's kitty 1.", Toast.LENGTH_SHORT).show();
+
+        //cat in the bush
+
+        double cx1 = 1590.0/1776;
+        double cy1 = 733.0/1080;
+
+        double cx2 = 1646.0/1776;
+        double cy2 = 891.0/1080;
+
+        double cx3 = 1728.0/1776;
+        double cy3 = 722.0/1080;
+
+        double ax1 = cx1*sw;//625
+        double ay1 = cy1*sh;//1046
+
+        double ax2 = cx2*sw;//1009.0
+        double ay2 = cy2*sh;//911
+
+        double ax3 = cx3*sw;//947
+        double ay3 = cy3*sh;//1048
+
+
+
+        if(isInTheTraingle(x,y,ax1,ax2,ax3,ay1,ay2,ay3))
+            Toast.makeText(MainActivity.getContext(),"Correct you've found kitty 2", Toast.LENGTH_SHORT).show();
+
+
+
+    }
+
+    private void questionThreeListener(double sw, double sh, double x, double y) {
+
+        double cx = 0.9206081081081081;
+        double cy = 453.0/1080;
+        double rw = 0.02728258602711158;
+
+        double ax = cx*sw;//1635
+        double ay = cy*sh;// 453
+        double ar = rw*sw;
+
+
+        if(isInTheSquare(x,y,ax,ay,ar))
+        Toast.makeText(MainActivity.getContext(), "There goes the Sun.", Toast.LENGTH_SHORT).show();
+
+    }
+
+    private void questionTwoListener(double sw, double sh, double x, double y) {
+
+        double cx1 = 0.34628378378378377 ;
+        double cy1 = 0.9953703703703703;
+
+        double cx2 = 0.5737612612612613;
+        double cy2 = 0.7694444444444445;
+
+        double cx3 = 0.5304054054054054;
+        double cy3 = 0.9953703703703703;
+
+        double ax1 = cx1*sw;//625
+        double ay1 = cy1*sh;//1046
+
+        double ax2 = cx2*sw;//1009.0
+        double ay2 = cy2*sh;//911
+
+        double ax3 = cx3*sw;//947
+        double ay3 = cy3*sh;//1048
+
+        Log.i("Triangle", cx1 + "   " + cy1 +"   " + cx2 + "   " + cy2 +"   " + cx3 + "   " + cy3 +"   ");
+
+
+        if(isInTheTraingle(x,y,ax1,ax2,ax3,ay1,ay2,ay3))
+            Toast.makeText(MainActivity.getContext(),"Correct you've found the butterfly wing!", Toast.LENGTH_SHORT).show();
+
+
+    }
+
+
+    private boolean isInTheTraingle(double x,double y,double x1,double x2,double x3,double y1,double y2, double y3 ){
+
+        //Calculate with the areas.
+
+        double ABC = Math.abs (x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2));
+        double ABP = Math.abs (x1 * (y2 - y) + x2 * (y - y1) + x * (y1 - y2));
+        double APC = Math.abs (x1 * (y - y3) + x * (y3 - y1) + x3 * (y1 - y));
+        double PBC = Math.abs (x * (y2 - y3) + x2 * (y3 - y) + x3 * (y - y2));
+
+        double sum = (ABP + APC + PBC);
+
+        Log.i("Triangle function ", "isInTheTraingle: " + (int)sum + "  " + (int)ABC);
+        return (int)sum == (int)ABC;
+
+    }
+
+    private boolean isInTheSquare(double x, double y, double ax, double ay, double ar) {
+
+        if(x<=ax+ar && x >= ax-ar)
+            if(y<= ay+ar && y >= ay-ar)
+            {
+                Log.i("Square", "isInTheSquare ");
+                return true;
+            }
+
+        return false;
+    }
+
+
+    private void questionOneListener(double sw, double sh, double x, double y) {
+
+        double cx = 0.40667361835245047;
+        double cy = 0.1434108527131783;
+        double rw = 0.03128258602711158;
+
+        double ax = cx*sw;
+        double ay = cy*sh;
+        double ar = rw*sw;
+
+        if(isInTheSquare(x,y,ax,ay,ar)){
+            Toast.makeText(MainActivity.getContext(),"Correct you've found The Earth!", Toast.LENGTH_SHORT).show();
+//                Log.i("Earth", ax + "   " + ay +"   " + ar + "   "+ x + "   "+ y);
+        }
+        //        Log.i("TAG", ax + "   " + ay +"   " + ar + "   "+ x + "   "+ y);
+    }
+
+
 
     private final class GestureListener extends GestureDetector.SimpleOnGestureListener {
 

@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -32,8 +33,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void setStatic() {
         setScreenSize();
+        setImageParam();
 
 
+    }
+
+    private void setImageParam() {
+        StaticData.imageHeight = 516;
+        StaticData.imageWidth = 959;
     }
 
     private void setListeners() {
@@ -107,8 +114,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void dismissSnackbars(){
-        bottomSnackbar.dismiss();
-        topSnackbar.dismiss();
+        if(bottomSnackbar != null)
+            bottomSnackbar.dismiss();
+        if(topSnackbar != null)
+            topSnackbar.dismiss();
     }
 
     @Override
@@ -136,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         StaticData.screenHeight = metrics.heightPixels;
         StaticData.screenWidth = metrics.widthPixels;
+        Log.i("fuck!", "setScreenSize: " + metrics.heightPixels+ "   "+ metrics.widthPixels);
     }
 
 }
