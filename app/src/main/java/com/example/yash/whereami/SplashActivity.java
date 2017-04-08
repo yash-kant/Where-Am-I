@@ -11,12 +11,13 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_splash);
         setFlags();
         doubleTouchListener();
-
     }
 
+    //add listener to the viewgroup
     private void doubleTouchListener() {
         OnSwipeTouchListener listener = new OnSwipeTouchListener(SplashActivity.this) {
 
@@ -38,6 +39,7 @@ public class SplashActivity extends AppCompatActivity {
         }
     }
 
+    //set up the orientation and make nav bar and status bar invisible
     private void setFlags() {
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN|View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;

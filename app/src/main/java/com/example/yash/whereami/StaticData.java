@@ -9,6 +9,8 @@ public class StaticData {
     public static int screenHeight;
     public static int questionId;
 
+    //TODO : use this array to calculate total score and left problems
+    public static boolean booleenArray[] = new boolean[12];
 
     public final static String[] questionArray = {
             "1. Find the Earth, our home.",

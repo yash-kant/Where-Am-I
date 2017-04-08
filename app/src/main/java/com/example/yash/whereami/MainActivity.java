@@ -13,11 +13,14 @@ import android.widget.TextView;
 
 import com.androidadvance.topsnackbar.TSnackbar;
 
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity {
 
     Snackbar bottomSnackbar;
     TSnackbar topSnackbar;
     private static Context context;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +33,14 @@ public class MainActivity extends AppCompatActivity {
         makeBottomSnackbar();
     }
 
+    //Set Static Data
     private void setStatic() {
         setScreenSize();
         StaticData.questionId = 0;
+        Arrays.fill(StaticData.booleenArray,false);
     }
 
+    //Add gesture and click listeners to the view
     private void setListeners() {
         View view = findViewById(R.id.touch_view);
         view.setOnTouchListener(new OnSwipeTouchListener(MainActivity.this) {
@@ -81,12 +87,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //set up the orientation and make nav bar and status bar invisible
     private void setFlags() {
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN|View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         decorView.setSystemUiVisibility(uiOptions);
     }
 
+    //displays question
     void makeBottomSnackbar(){
 
         bottomSnackbar = Snackbar.make(this.findViewById(android.R.id.content),StaticData.questionArray[StaticData.questionId], Snackbar.LENGTH_INDEFINITE);
@@ -96,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
         bottomSnackbar.show();
     }
 
+    //displays hint
     void makeTopSnackbar(){
         topSnackbar = TSnackbar.make(this.findViewById(android.R.id.content), "Hint: " + StaticData.hintsArray[StaticData.questionId], TSnackbar.LENGTH_INDEFINITE);
         View view = topSnackbar.getView();
@@ -105,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //dismisses both question and hint
     void dismissSnackbars(){
         if(bottomSnackbar != null)
             bottomSnackbar.dismiss();
@@ -122,15 +132,19 @@ public class MainActivity extends AppCompatActivity {
 
     private void setScreenSize() {
         DisplayMetrics metrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        getWindowManager().getDefaultDisplay().getRealMetrics(metrics);
         StaticData.screenHeight = metrics.heightPixels;
+
         switch (StaticData.screenHeight){
+
+            //standard forms
             case 1440: StaticData.screenWidth = 2560;break;
             case 1080: StaticData.screenWidth = 1920;break;
             case 540:StaticData.screenWidth = 960;break;
+
             default: StaticData.screenWidth = metrics.widthPixels;
         }
-        Log.i("Resolution", "setScreenSize: "+ StaticData.screenHeight+ "   "+ StaticData.screenWidth);
+        Log.i("Resolution", "setScreenSize: "+ metrics.widthPixels+ "   "+ metrics.heightPixels);
     }
 
     @Override
