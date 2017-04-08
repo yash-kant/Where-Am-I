@@ -447,11 +447,6 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         return false;
     }
 
-
-
-
-
-
     private final class GestureListener extends GestureDetector.SimpleOnGestureListener {
 
         private static final int SWIPE_THRESHOLD = 100;
@@ -480,7 +475,6 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
             super.onLongPress(e);
         }
 
-        // Determines the fling velocity and then fires the appropriate swipe event accordingly
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
             boolean result = false;

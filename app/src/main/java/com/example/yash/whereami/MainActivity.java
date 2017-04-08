@@ -27,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
         setStatic();
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setListeners();
+        makeBottomSnackbar();
     }
 
     private void setStatic() {
         setScreenSize();
         StaticData.questionId = 0;
     }
-
 
     private void setListeners() {
         View view = findViewById(R.id.touch_view);
@@ -112,18 +112,6 @@ public class MainActivity extends AppCompatActivity {
             topSnackbar.dismiss();
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        setFlags();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        setFlags();
-    }
-
     public static void setContext(Context context) {
         MainActivity.context = context;
     }
@@ -143,6 +131,18 @@ public class MainActivity extends AppCompatActivity {
             default: StaticData.screenWidth = metrics.widthPixels;
         }
         Log.i("Resolution", "setScreenSize: "+ StaticData.screenHeight+ "   "+ StaticData.screenWidth);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        setFlags();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setFlags();
     }
 
 }

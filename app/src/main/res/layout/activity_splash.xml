@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_splash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.yash.whereami.SplashActivity"
+    android:gravity="center"
+    android:weightSum="1"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/howto"
+        android:textSize="25dp"
+        android:text="How to Play"
+        android:textColor="@color/colorWhite"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/howto"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/linear_group"
+        >
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            fancy:fb_borderColor="#080606"
+            fancy:fb_borderWidth="5dp"
+            fancy:fb_defaultColor="#fbff00"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="Swipe up to see the question"
+            fancy:fb_textSize="15dp"
+            fancy:fb_textColor="#0e0468"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            fancy:fb_borderColor="#080606"
+            fancy:fb_borderWidth="5dp"
+            fancy:fb_defaultColor="#fbff00"
+            fancy:fb_radius="180dp"
+            fancy:fb_text="Swipe Down to see the hint"
+            fancy:fb_textSize="15dp"
+            fancy:fb_textColor="#0e0468"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            fancy:fb_borderColor="#080606"
+            fancy:fb_borderWidth="5dp"
+            fancy:fb_defaultColor="#fbff00"
+            fancy:fb_radius="180dp"
+            fancy:fb_text="Swipe Side Ways to change the question"
+            fancy:fb_textSize="15dp"
+            fancy:fb_textColor="#0e0468"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            fancy:fb_borderColor="#080606"
+            fancy:fb_borderWidth="5dp"
+            fancy:fb_defaultColor="#fbff00"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="Double Tap to dismiss and play"
+            fancy:fb_textSize="15dp"
+            fancy:fb_textColor="#0e0468"/>
+    </LinearLayout>
+</RelativeLayout>
