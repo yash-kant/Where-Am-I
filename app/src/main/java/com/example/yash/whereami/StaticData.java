@@ -7,8 +7,7 @@ public class StaticData {
 
     public static int screenWidth;
     public static int screenHeight;
-    public static int imageWidth;
-    public static int imageHeight;
+    public static int questionId;
 
 
     public final static String[] questionArray = {

@@ -33,18 +33,21 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
 
         Log.i("Touch", x + "   " + y);
 
-//        questionOneListener(sw,sh,x,y);
-//        questionTwoListener(sw,sh,x,y);
-//        questionThreeListener(sw,sh,x,y);
-//        questionFourListener(sw,sh,x,y);
-//        questionFiveListener(sw,sh,x,y);
-//        questionSixListener(sw,sh,x,y);
-//        questionSevenListener(sw,sh,x,y);
-//        questionEightListener(sw,sh,x,y);
-//        questionNineListener(sw,sh,x,y);
-//        questionTenListener(sw,sh,x,y);
-//        questionElevenListener(sw,sh,x,y);
-//        questionTwelveListener(sw,sh,x,y);
+        switch (StaticData.questionId){
+            case 0:questionOneListener(sw,sh,x,y);break;
+            case 1:questionTwoListener(sw,sh,x,y);break;
+            case 2:questionThreeListener(sw,sh,x,y);break;
+            case 3:questionFourListener(sw,sh,x,y);break;
+            case 4:questionFiveListener(sw,sh,x,y);break;
+            case 5:questionSixListener(sw,sh,x,y);break;
+            case 6:questionSevenListener(sw,sh,x,y);break;
+            case 7:questionEightListener(sw,sh,x,y);break;
+            case 8:questionNineListener(sw,sh,x,y);break;
+            case 9:questionTenListener(sw,sh,x,y);break;
+            case 10:questionElevenListener(sw,sh,x,y);break;
+            case 11:questionTwelveListener(sw,sh,x,y);break;
+        }
+
     }
 
     private void questionTwelveListener(double sw, double sh, double x, double y) {

@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
     Snackbar bottomSnackbar;
     TSnackbar topSnackbar;
-    private int question_id = 0;
     private static Context context;
 
     @Override
@@ -32,15 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setStatic() {
         setScreenSize();
-        setImageParam();
-
-
+        StaticData.questionId = 0;
     }
 
-    private void setImageParam() {
-        StaticData.imageHeight = 516;
-        StaticData.imageWidth = 959;
-    }
 
     private void setListeners() {
         View view = findViewById(R.id.touch_view);
@@ -73,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSwipeLeft() {
                 super.onSwipeLeft();
-                question_id = question_id < 11 ? ++question_id : 0;
+                StaticData.questionId = StaticData.questionId < 11 ? ++StaticData.questionId : 0;
                 dismissSnackbars();
                 makeBottomSnackbar();
             }
@@ -81,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSwipeRight() {
                 super.onSwipeRight();
-                question_id = question_id > 0 ? --question_id : 11;
+                StaticData.questionId = StaticData.questionId > 0 ? --StaticData.questionId : 11;
                 dismissSnackbars();
                 makeBottomSnackbar();
             }
@@ -96,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
     void makeBottomSnackbar(){
 
-        bottomSnackbar = Snackbar.make(this.findViewById(android.R.id.content),StaticData.questionArray[question_id], Snackbar.LENGTH_INDEFINITE);
+        bottomSnackbar = Snackbar.make(this.findViewById(android.R.id.content),StaticData.questionArray[StaticData.questionId], Snackbar.LENGTH_INDEFINITE);
         View view = bottomSnackbar.getView();
         TextView textView = (TextView) view.findViewById(android.support.design.R.id.snackbar_text);
         textView.setTextColor(Color.RED);
@@ -104,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void makeTopSnackbar(){
-        topSnackbar = TSnackbar.make(this.findViewById(android.R.id.content), "Hint: " + StaticData.hintsArray[question_id], TSnackbar.LENGTH_INDEFINITE);
+        topSnackbar = TSnackbar.make(this.findViewById(android.R.id.content), "Hint: " + StaticData.hintsArray[StaticData.questionId], TSnackbar.LENGTH_INDEFINITE);
         View view = topSnackbar.getView();
         TextView textView = (TextView) view.findViewById(android.support.design.R.id.snackbar_text);
         textView.setTextColor(Color.GREEN);
