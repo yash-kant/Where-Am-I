@@ -1,6 +1,5 @@
 package com.example.yash.whereami;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
@@ -144,8 +143,13 @@ public class MainActivity extends AppCompatActivity {
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         StaticData.screenHeight = metrics.heightPixels;
-        StaticData.screenWidth = metrics.widthPixels;
-        Log.i("fuck!", "setScreenSize: " + metrics.heightPixels+ "   "+ metrics.widthPixels);
+        switch (StaticData.screenHeight){
+            case 1440: StaticData.screenWidth = 2560;break;
+            case 1080: StaticData.screenWidth = 1920;break;
+            case 540:StaticData.screenWidth = 960;break;
+            default: StaticData.screenWidth = metrics.widthPixels;
+        }
+        Log.i("Resolution", "setScreenSize: "+ StaticData.screenHeight+ "   "+ StaticData.screenWidth);
     }
 
 }

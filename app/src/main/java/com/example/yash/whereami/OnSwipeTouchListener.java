@@ -33,25 +33,25 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
 
         Log.i("Touch", x + "   " + y);
 
-        questionOneListener(sw,sh,x,y);
-        questionTwoListener(sw,sh,x,y);
-        questionThreeListener(sw,sh,x,y);
-        questionFourListener(sw,sh,x,y);
-        questionFiveListener(sw,sh,x,y);
-        questionSixListener(sw,sh,x,y);
-        questionSevenListener(sw,sh,x,y);
-        questionEightListener(sw,sh,x,y);
-        questionNineListener(sw,sh,x,y);
-        questionTenListener(sw,sh,x,y);
-        questionElevenListener(sw,sh,x,y);
-        questionTwelveListener(sw,sh,x,y);
+//        questionOneListener(sw,sh,x,y);
+//        questionTwoListener(sw,sh,x,y);
+//        questionThreeListener(sw,sh,x,y);
+//        questionFourListener(sw,sh,x,y);
+//        questionFiveListener(sw,sh,x,y);
+//        questionSixListener(sw,sh,x,y);
+//        questionSevenListener(sw,sh,x,y);
+//        questionEightListener(sw,sh,x,y);
+//        questionNineListener(sw,sh,x,y);
+//        questionTenListener(sw,sh,x,y);
+//        questionElevenListener(sw,sh,x,y);
+//        questionTwelveListener(sw,sh,x,y);
     }
 
     private void questionTwelveListener(double sw, double sh, double x, double y) {
 
-        double cx = 1227.0/1776;
+        double cx = 1227.0/1920;
         double cy = 49.0/1080;
-        double rw = 0.03028258602711158;
+        double rw = 53.78187278415017/1920;
 
         double ax = cx*sw;
         double ay = cy*sh;
@@ -67,9 +67,9 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
 
         //clockwise
 
-        double cx = 244.0/1776;
+        double cx = 244.0/1920;
         double cy = 352.0/1080;
-        double rw = 0.01928258602711158;
+        double rw = 34.245872784150166/1920;
 
         double ax = cx*sw;//1260
         double ay = cy*sh;// 592
@@ -78,9 +78,9 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         if(isInTheSquare(x,y,ax,ay,ar))
             Toast.makeText(MainActivity.getContext(), "That's flower 1.", Toast.LENGTH_SHORT).show();
 
-        cx = 447.0/1776;
+        cx = 447.0/1920;
         cy = 656.0/1080;
-        rw = 0.01928258602711158;
+        rw = 34.245872784150166/1920;
 
         ax = cx*sw;
         ay = cy*sh;
@@ -89,9 +89,9 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         if(isInTheSquare(x,y,ax,ay,ar))
             Toast.makeText(MainActivity.getContext(), "That's flower 2.", Toast.LENGTH_SHORT).show();
 
-        cx = 50.0/1776;
+        cx = 50.0/1920;
         cy = 371.0/1080;
-        rw = 0.03028258602711158;
+        rw = 53.78187278415017/1920;
 
         ax = cx*sw;
         ay = cy*sh;
@@ -105,13 +105,13 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
 
     private void questionTenListener(double sw, double sh, double x, double y) {
 
-        double cx1 = 128.0/1776;
+        double cx1 = 128.0/1920;
         double cy1 = 369.0/1080;
 
-        double cx2 = 49.0/1776;
+        double cx2 = 49.0/1920;
         double cy2 = 167.0/1080;
 
-        double cx3 = 296.0/1776;
+        double cx3 = 296.0/1920;
         double cy3 = 193.0/1080;
 
         double ax1 = cx1*sw;
@@ -131,9 +131,9 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
     private void questionNineListener(double sw, double sh, double x, double y) {
         //going clockwise
 
-        double cx = 1585.0/1776;
+        double cx = 1585.0/1920;
         double cy = 82.0/1080;
-        double rw = 0.02128258602711158;
+        double rw = 37.797872784150165/1920;
 
         double ax = cx*sw;//1260
         double ay = cy*sh;// 592
@@ -142,9 +142,9 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         if(isInTheSquare(x,y,ax,ay,ar))
             Toast.makeText(MainActivity.getContext(), "That's ant 1.", Toast.LENGTH_SHORT).show();
 
-        cx = 1832.0/1776;
+        cx = 1832.0/1920;
         cy = 198.0/1080;
-        rw = 0.02428258602711158;
+        rw = 43.12587278415016/1920;
 
         ax = cx*sw;
         ay = cy*sh;
@@ -153,9 +153,9 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         if(isInTheSquare(x,y,ax,ay,ar))
             Toast.makeText(MainActivity.getContext(), "That's ant 2.", Toast.LENGTH_SHORT).show();
 
-        cx = 1851.0/1776;
+        cx = 1851.0/1920;
         cy = 989.0/1080;
-        rw = 0.03828258602711158;
+        rw = 67.98987278415017/1920;
 
         ax = cx*sw;
         ay = cy*sh;
@@ -164,9 +164,9 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         if(isInTheSquare(x,y,ax,ay,ar))
             Toast.makeText(MainActivity.getContext(), "That's ant 3.", Toast.LENGTH_SHORT).show();
 
-        cx = 397.0/1776;
+        cx = 397.0/1920;
         cy = 727.0/1080;
-        rw = 0.02328258602711158;
+        rw = 41.34987278415017/1920;
 
         ax = cx*sw;
         ay = cy*sh;
@@ -175,9 +175,9 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         if(isInTheSquare(x,y,ax,ay,ar))
             Toast.makeText(MainActivity.getContext(), "That's ant 4.", Toast.LENGTH_SHORT).show();
 
-        cx = 84.0/1776;
+        cx = 84.0/1920;
         cy = 958.0/1080;
-        rw = 0.03728258602711158;
+        rw = 66.21387278415017/1920;
 
         ax = cx*sw;
         ay = cy*sh;
@@ -188,9 +188,9 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
     }
 
     private void questionEightListener(double sw, double sh, double x, double y) {
-        double cx = 1364.0/1776;
+        double cx = 1364.0/1920;
         double cy = 780.0/1080;
-        double rw = 0.03828258602711158;
+        double rw = 67.98987278415017/1920;
 
         double ax = cx*sw;//1260
         double ay = cy*sh;// 592
@@ -202,13 +202,13 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
 
     private void questionSevenListener(double sw, double sh, double x, double y) {
 
-        double cx1 = 1060.0/1776;
+        double cx1 = 1060.0/1920;
         double cy1 = 159.0/1080;
 
-        double cx2 = 1036.0/1776;
+        double cx2 = 1036.0/1920;
         double cy2 = 41.0/1080;
 
-        double cx3 = 1160.0/1776;
+        double cx3 = 1160.0/1920;
         double cy3 = 30.0/1080;
 
         double ax1 = cx1*sw;
@@ -228,9 +228,9 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
 
     private void questionSixListener(double sw, double sh, double x, double y) {
 
-        double cx = 1163.0/1776;
+        double cx = 1163.0/1920;
         double cy = 768.0/1080;
-        double rw = 0.02128258602711158;
+        double rw = 37.797872784150165/1920;
 
         double ax = cx*sw;
         double ay = cy*sh;
@@ -239,9 +239,9 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         if(isInTheSquare(x,y,ax,ay,ar))
             Toast.makeText(MainActivity.getContext(), "That's slipper 1.", Toast.LENGTH_SHORT).show();
 
-        cx = 1631.0/1776;
+        cx = 1631.0/1920;
         cy = 723.0/1080;
-        rw = 0.02128258602711158;
+        rw = 37.797872784150165/1920;
 
         ax = cx*sw;
         ay = cy*sh;
@@ -258,13 +258,13 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
     private void questionFiveListener(double sw, double sh, double x, double y) {
 
         //bottom owl
-        double cx1 = 531.0/1776;
+        double cx1 = 531.0/1920;
         double cy1 = 261.0/1080;
 
-        double cx2 = 424.0/1776;
+        double cx2 = 424.0/1920;
         double cy2 = 378.0/1080;
 
-        double cx3 = 727.0/1776;
+        double cx3 = 727.0/1920;
         double cy3 = 281.0/1080;
 
         double ax1 = cx1*sw;
@@ -283,13 +283,13 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
 
         //top owl
 
-         cx1 = 393.0/1776;
+         cx1 = 393.0/1920;
          cy1 = 223.0/1080;
 
-         cx2 = 565.0/1776;
+         cx2 = 565.0/1920;
          cy2 = 113.0/1080;
 
-         cx3 = 417.0/1776;
+         cx3 = 417.0/1920;
          cy3 = 80.0/1080;
 
          ax1 = cx1*sw;
@@ -312,9 +312,9 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
     private void questionFourListener(double sw, double sh, double x, double y) {
 
         //cat near the girl
-        double cx = 1260.0/1776;
+        double cx = 1260.0/1920;
         double cy = 592.0/1080;
-        double rw = 0.02728258602711158;
+        double rw = 48.45387278415017/1920;
 
         double ax = cx*sw;//1260
         double ay = cy*sh;// 592
@@ -325,13 +325,13 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
 
         //cat in the bush
 
-        double cx1 = 1590.0/1776;
+        double cx1 = 1590.0/1920;
         double cy1 = 733.0/1080;
 
-        double cx2 = 1646.0/1776;
+        double cx2 = 1646.0/1920;
         double cy2 = 891.0/1080;
 
-        double cx3 = 1728.0/1776;
+        double cx3 = 1728.0/1920;
         double cy3 = 722.0/1080;
 
         double ax1 = cx1*sw;//625
@@ -354,9 +354,10 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
 
     private void questionThreeListener(double sw, double sh, double x, double y) {
 
-        double cx = 0.9206081081081081;
+        //made a change here to 1920
+        double cx = 1635.0/1920;
         double cy = 453.0/1080;
-        double rw = 0.02728258602711158;
+        double rw = 48.45387278415017/1920;
 
         double ax = cx*sw;//1635
         double ay = cy*sh;// 453
@@ -370,13 +371,13 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
 
     private void questionTwoListener(double sw, double sh, double x, double y) {
 
-        double cx1 = 0.34628378378378377 ;
+        double cx1 = 615.0/1920;
         double cy1 = 0.9953703703703703;
 
-        double cx2 = 0.5737612612612613;
+        double cx2 = 1019.0/1920;
         double cy2 = 0.7694444444444445;
 
-        double cx3 = 0.5304054054054054;
+        double cx3 = 942.0/1920;
         double cy3 = 0.9953703703703703;
 
         double ax1 = cx1*sw;//625
@@ -385,10 +386,11 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         double ax2 = cx2*sw;//1009.0
         double ay2 = cy2*sh;//911
 
-        double ax3 = cx3*sw;//947
+        double ax3 = cx3*sw;//942
         double ay3 = cy3*sh;//1048
 
-        Log.i("Triangle", cx1 + "   " + cy1 +"   " + cx2 + "   " + cy2 +"   " + cx3 + "   " + cy3 +"   ");
+
+        Log.i("Triangle", ax1 + "   " + ay1 +"   " + ax2 + "   " + ay2 +"   " + ax3 + "   " + ay3 +"   ");
 
 
         if(isInTheTraingle(x,y,ax1,ax2,ax3,ay1,ay2,ay3))
@@ -397,6 +399,22 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
 
     }
 
+    private void questionOneListener(double sw, double sh, double x, double y) {
+
+        double cx = 723.0/1920;
+        double cy = 0.1434108527131783;
+        double rw = 55.55787278415016/1920;
+
+        double ax = cx*sw;
+        double ay = cy*sh;
+        double ar = rw*sw;
+
+        if(isInTheSquare(x,y,ax,ay,ar)){
+            Toast.makeText(MainActivity.getContext(),"Correct you've found The Earth!", Toast.LENGTH_SHORT).show();
+//                Log.i("Earth", ax + "   " + ay +"   " + ar + "   "+ x + "   "+ y);
+        }
+        //        Log.i("TAG", ax + "   " + ay +"   " + ar + "   "+ x + "   "+ y);
+    }
 
     private boolean isInTheTraingle(double x,double y,double x1,double x2,double x3,double y1,double y2, double y3 ){
 
@@ -427,22 +445,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
     }
 
 
-    private void questionOneListener(double sw, double sh, double x, double y) {
 
-        double cx = 0.40667361835245047;
-        double cy = 0.1434108527131783;
-        double rw = 0.03128258602711158;
-
-        double ax = cx*sw;
-        double ay = cy*sh;
-        double ar = rw*sw;
-
-        if(isInTheSquare(x,y,ax,ay,ar)){
-            Toast.makeText(MainActivity.getContext(),"Correct you've found The Earth!", Toast.LENGTH_SHORT).show();
-//                Log.i("Earth", ax + "   " + ay +"   " + ar + "   "+ x + "   "+ y);
-        }
-        //        Log.i("TAG", ax + "   " + ay +"   " + ar + "   "+ x + "   "+ y);
-    }
 
 
 
