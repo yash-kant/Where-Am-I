@@ -91,7 +91,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         double ay = cy*sh;// 592
         double ar = rw*sw;
 
-        mToast =  Toast.makeText(MainActivity.getContext(), "That's flower 1.", Toast.LENGTH_SHORT);
+        mToast =  Toast.makeText(MainActivity.getContext(), "That's flower no. 1.", Toast.LENGTH_SHORT);
 
         if(isInTheSquare(x,y,ax,ay,ar))
            mToast.show();
@@ -104,7 +104,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         ay = cy*sh;
         ar = rw*sw;
 
-        mToast =  Toast.makeText(MainActivity.getContext(), "That's flower 2.", Toast.LENGTH_SHORT);
+        mToast =  Toast.makeText(MainActivity.getContext(), "That's flower no. 2.", Toast.LENGTH_SHORT);
 
 
         if(isInTheSquare(x,y,ax,ay,ar))
@@ -118,7 +118,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         ay = cy*sh;
         ar = rw*sw;
 
-        mToast =  Toast.makeText(MainActivity.getContext(), "Those are flowers 3&4.", Toast.LENGTH_SHORT);
+        mToast =  Toast.makeText(MainActivity.getContext(), "Those are flowers nos. 3&4.", Toast.LENGTH_SHORT);
 
         if(isInTheSquare(x,y,ax,ay,ar))
             mToast.show();
@@ -148,7 +148,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         double ax3 = cx3*sw;
         double ay3 = cy3*sh;
 
-        mToast=Toast.makeText(MainActivity.getContext(),"There's caterpillar. ", Toast.LENGTH_SHORT);
+        mToast=Toast.makeText(MainActivity.getContext(),"You've the caterpillar. ", Toast.LENGTH_SHORT);
 
         if(isInTheTraingle(x,y,ax1,ax2,ax3,ay1,ay2,ay3))
            mToast.show();
@@ -169,7 +169,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         double ay = cy*sh;// 592
         double ar = rw*sw;
 
-        mToast= Toast.makeText(MainActivity.getContext(), "That's ant 1.", Toast.LENGTH_SHORT);
+        mToast= Toast.makeText(MainActivity.getContext(), "That's ant no. 1.", Toast.LENGTH_SHORT);
         if(isInTheSquare(x,y,ax,ay,ar))
             mToast.show();
 
@@ -182,7 +182,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         ay = cy*sh;
         ar = rw*sw;
 
-        mToast= Toast.makeText(MainActivity.getContext(), "That's ant 2.", Toast.LENGTH_SHORT);
+        mToast= Toast.makeText(MainActivity.getContext(), "That's ant no. 2.", Toast.LENGTH_SHORT);
         if(isInTheSquare(x,y,ax,ay,ar))
             mToast.show();
 
@@ -194,7 +194,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         ay = cy*sh;
         ar = rw*sw;
 
-        mToast= Toast.makeText(MainActivity.getContext(), "That's ant 3.", Toast.LENGTH_SHORT);
+        mToast= Toast.makeText(MainActivity.getContext(), "That's ant no. 3.", Toast.LENGTH_SHORT);
         if(isInTheSquare(x,y,ax,ay,ar))
             mToast.show();
 
@@ -206,7 +206,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         ay = cy*sh;
         ar = rw*sw;
 
-        mToast= Toast.makeText(MainActivity.getContext(), "That's ant 4.", Toast.LENGTH_SHORT);
+        mToast= Toast.makeText(MainActivity.getContext(), "That's ant no. 4.", Toast.LENGTH_SHORT);
         if(isInTheSquare(x,y,ax,ay,ar))
             mToast.show();
 
@@ -218,7 +218,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         ay = cy*sh;
         ar = rw*sw;
 
-        mToast= Toast.makeText(MainActivity.getContext(), "That's ant 5.", Toast.LENGTH_SHORT);
+        mToast= Toast.makeText(MainActivity.getContext(), "That's ant no. 5.", Toast.LENGTH_SHORT);
         if(isInTheSquare(x,y,ax,ay,ar))
             mToast.show();
     }
@@ -282,7 +282,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         double ay = cy*sh;
         double ar = rw*sw;
 
-        mToast= Toast.makeText(MainActivity.getContext(), "That's slipper 1.", Toast.LENGTH_SHORT);
+        mToast= Toast.makeText(MainActivity.getContext(), "Found slipper no 1.", Toast.LENGTH_SHORT);
         if(isInTheSquare(x,y,ax,ay,ar))
             mToast.show();
 
@@ -294,7 +294,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         ay = cy*sh;
         ar = rw*sw;
 
-        mToast= Toast.makeText(MainActivity.getContext(), "That's slipper 2.", Toast.LENGTH_SHORT);
+        mToast= Toast.makeText(MainActivity.getContext(), "Found slipper no 2.", Toast.LENGTH_SHORT);
         if(isInTheSquare(x,y,ax,ay,ar))
             mToast.show();
     }
@@ -322,7 +322,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         double ax3 = cx3*sw;
         double ay3 = cy3*sh;
 
-        mToast= Toast.makeText(MainActivity.getContext(), "That's owl 1.", Toast.LENGTH_SHORT);
+        mToast= Toast.makeText(MainActivity.getContext(), "That's owl no. 1.", Toast.LENGTH_SHORT);
         if(isInTheTraingle(x,y,ax1,ax2,ax3,ay1,ay2,ay3))
             mToast.show();
 
@@ -347,7 +347,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
          ay3 = cy3*sh;
 
 
-        mToast= Toast.makeText(MainActivity.getContext(), "That's owl 2.", Toast.LENGTH_SHORT);
+        mToast= Toast.makeText(MainActivity.getContext(), "That's owl no. 2.", Toast.LENGTH_SHORT);
         if(isInTheTraingle(x,y,ax1,ax2,ax3,ay1,ay2,ay3))
             mToast.show();
     }
@@ -365,7 +365,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         double ay = cy*sh;// 592
         double ar = rw*sw;
 
-        mToast=Toast.makeText(MainActivity.getContext(), "That's kitty 1.", Toast.LENGTH_SHORT);
+        mToast=Toast.makeText(MainActivity.getContext(), "That's cat no. 1.", Toast.LENGTH_SHORT);
 
         if(isInTheSquare(x,y,ax,ay,ar))
             mToast.show();
@@ -391,7 +391,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         double ay3 = cy3*sh;//1048
 
 
-        mToast=Toast.makeText(MainActivity.getContext(),"Correct you've found kitty 2", Toast.LENGTH_SHORT);
+        mToast=Toast.makeText(MainActivity.getContext(),"Correct you've found cat no. 2", Toast.LENGTH_SHORT);
         if(isInTheTraingle(x,y,ax1,ax2,ax3,ay1,ay2,ay3))
             mToast.show();
 
@@ -441,7 +441,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
 
         Log.i("Triangle", ax1 + "   " + ay1 +"   " + ax2 + "   " + ay2 +"   " + ax3 + "   " + ay3 +"   ");
 
-        mToast = Toast.makeText(MainActivity.getContext(),"Correct you've found the butterfly wing!", Toast.LENGTH_SHORT);
+        mToast = Toast.makeText(MainActivity.getContext(),"Great you've found the butterfly wing!", Toast.LENGTH_SHORT);
         if(isInTheTraingle(x,y,ax1,ax2,ax3,ay1,ay2,ay3))
             mToast.show();
 

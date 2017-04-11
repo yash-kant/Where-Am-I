@@ -37,7 +37,7 @@ public class StaticData {
             "He's there hiding in the tree.",
             "The girl seems to be reading one.",
             "Look on the leaves.",
-            "She's eating something on the left.",
+            "It's eating something on the left.",
             "They are present on the left.",
             "Look in the sky."
     };
